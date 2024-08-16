@@ -96,5 +96,8 @@ new_data_batch = [{"timestamp": ts, "text_field": text} for ts, text in incoming
 ingest_batch(new_data_batch)
 ```
 Considerations:
-Streaming vs. Batching: Decide if you're processing data in real-time (streaming) or in batches. For streaming, you might store each individual record's embedding immediately, whereas, for batching, you aggregate embeddings after a certain number of records.
+Streaming vs. Batching: Decide if you're processing data in real-time (streaming) or in batches. 
+
+For streaming, you might store each individual record's embedding immediately, whereas, for batching, you aggregate embeddings after a certain number of records.
+
 Error Handling: Implement error handling for cases where embedding generation or database operations might fail.
